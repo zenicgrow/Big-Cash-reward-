@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Cash</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" sizes="32x32" href="https://https://i.postimg.cc/g0ptW6qN/images.png">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 20px;
+        }
+
+        .header img {
+            width: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #f7b500;
+            margin: 65px 0;
+        }
+        h3{
+            color: #f7b500;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #aaa;
+        }
+
+        .input-container {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .input-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #aaa;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .input-group select {
+            border: none;
+            background: transparent;
+            color: #fff;
+            outline: none;
+            margin-right: 10px;
+        }
+
+        .input-group input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            color: #fff;
+            outline: none;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        .btn {
+            background-color: #f7b500;
+            color: #000;
+            border: none;
+            padding: 12px 0;
+            font-size: 16px;
+            font-weight: 700;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .text-left{
+            text-align: left;
+        }
+        .tracker{
+            margin: 30px;
+        }
+        
+    </style>
+ </head>
+ <body>
+  <div class="container">
+   <div class="header">
+    <img src="https://i.postimg.cc/g0ptW6qN/images.png" alt="Logo">
+    <h1>Big Cash</h1>
+   </div>
+   <h2>Get ₹80 Cashback</h2>
+   <p>Important! <br>
+    Complete this Offer Carefully, Don’t USE WIFI, Offer Reward will Only be Tracked with Mobile Internet and You must be New User in the Partner Website App.</p>
+   <form action="" method="POST">
+    <div class="input-container">
+     <label for="upi">VPA UPI</label>
+     <div class="input-group">
+      <input type="email" id="user" class="input" placeholder="Enter UPI ID" required>
+     </div>
+     <div id="statusMessage"></div><input type="hidden" id="refer" value="ngyIdM">
+    </div><button class="btn" id="submitButton">Submit</button>
+   </form>
+   <br>
+   <hr>
+   <h3>Steps To Avail Offer :</h3>
+   <ul>
+    <li class="text-left">Install Big Cash App</li>
+    <li class="text-left">Open App</li>
+    <li class="text-left">Registration with Mobile number</li>
+   </ul>
+   <h3>Terms &amp; Conditions :</h3>
+   <ul>
+    <li class="text-left">Payment Type :- UPI</li>
+    <li class="text-left">Payment Time :- 24 Hours</li>
+    <li class="text-left">One UPI One Time</li>
+   </ul>
+  </div>
+  <script>
+$(document).ready(function() {
+     $("#submitButton").click(function (event) {
+        event.preventDefault(); 
+        RedirectUser(); 
+    });
+});
+    function RedirectUser() {
+    var input_check = "inactive";
+    var input1 = "";
+    var input2 = "";
+    var input3 = "";
+    var user_id = "1";
+    var camp_id = "11";
+    var user = $("#user").val() || "";
+    var field1 = $("#input1").val() || "";
+    var field2 = $("#input2").val() || "";
+    var field3 = $("#input3").val() || "";
+    var refer = $("#refer").val() || "";
+    var submitButton = $("#submitButton");
+    
+    $('#statusMessage').text('')
+    
+    let isValid = true;
+    
+    if (user === "") {
+        $('#statusMessage').text("UPI is required").css('color', 'red');
+        isValid = false;
+        return;
+    }
+    
+    if(input_check === "active"){
+        if(input1!==""){
+            if (field1 === "") {
+        $('#statusMessage').text("All Fields is required").css('color', 'red');
+        isValid = false;
+        return;
+    }
+        }
+        
+        if(input2!==""){
+            if (field2 === "") {
+        $('#statusMessage').text("All Fields is required").css('color', 'red');
+        isValid = false;
+        return;
+    }
+        }
+        
+        if(input3!==""){
+            if (field3 === "") {
+        $('#statusMessage').text("All Fields is required").css('color', 'red');
+        isValid = false;
+        return;
+    }
+        }
+    }
+    
+
+    if (!isValid) {
+        return;
+    }
+    
+    submitButton.text("Please wait...").prop('disabled', true);
+
+    $.ajax({
+        url: 'action.php',
+        type: 'POST',
+        data: {
+            user: user,
+            refer: refer,
+            field1: field1,
+            field2: field2,
+            field3: field3,
+        },
+        success: function(data) {
+            let myres = JSON.parse(data);
+            if (myres.status == 'success') {
+                submitButton.text(myres.message).prop('disabled', true);
+            window.location.href = 'https://bigcash.live/?i=141026386/c?cid=' + camp_id + '&uid=' + user_id + '&p1=' + user + '&p2=' + refer + '&p3=Ol9qE4&p4=' + field1 + '&p5=' + field2 + '&p6=' + field3 + '&type=offer';
+            } else {
+               $('#statusMessage').text(myres.message).css('color', 'red');
+               submitButton.text("Submit").prop('disabled', false);
+            }
+        },
+        error: function() {
+            notifier.show('ops!', 'Something went wrong', '', '../assets/images/notification/high_priority-48.png', 2000);
+            submitButton.text("Submit").prop('disabled', false);
+        }
+    });
+}
+</script>
+ </body>
+</html>
